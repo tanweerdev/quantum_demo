@@ -14,6 +14,7 @@ defmodule QuantumDemo.Application do
       supervisor(QuantumDemoWeb.Endpoint, []),
       # Start your own worker by calling: QuantumDemo.Worker.start_link(arg1, arg2, arg3)
       # worker(QuantumDemo.Worker, [arg1, arg2, arg3]),
+      worker(QuantumDemo.Scheduler, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
